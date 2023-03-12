@@ -31,7 +31,7 @@ spec:
     spec:
       containers:
         - name: mysql
-          image: vishnu2508/spc:latest
+          image: mysql:5.6
           env:
             - name: MYSQL_DATABASE
               value: 'test'
