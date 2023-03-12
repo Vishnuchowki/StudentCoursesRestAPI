@@ -25,7 +25,7 @@ pipeline {
             steps {
                 sh 'kubectl apply -f ./K8S/mysql-aws.yml'
                 sh 'kubectl apply -f ./K8S/flask-aws.yml'
-                sh 'sleep 10s'
+                //sh 'sleep 10s'
                 sh 'kubectl get svc'
             }
             
