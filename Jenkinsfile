@@ -23,8 +23,8 @@ pipeline {
         }
         stage('deploy to st'){
             steps {
-                sh 'kubectl apply -f ./K8S/mysql-aws.yml'
-                sh 'kubectl apply -f ./K8S/flask-aws.yml'
+                sh 'kubectl apply -f /c/Users/DELL/cicdpractice/screpted_pipeline/StudentCoursesRestAPI/K8S/mysql-aws.yml'
+                sh 'kubectl apply -f /c/Users/DELL/cicdpractice/screpted_pipeline/StudentCoursesRestAPI/K8s/flask-aws.yml'
                 //sh 'sleep 10s'
                 sh 'kubectl get svc'
             }
