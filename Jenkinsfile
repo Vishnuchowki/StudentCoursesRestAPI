@@ -1,5 +1,5 @@
 pipeline {
-    agent { label 'JDK_17' }
+    agent { label 'NODE_2' }
     triggers { 
         pollSCM('* * * * *')
     }
