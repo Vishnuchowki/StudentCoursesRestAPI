@@ -21,11 +21,11 @@ pipeline {
                 sh 'docker image push vishnu2508/spc:latest'
             }
         }
-        stage('deploy to st'){
+        stage('deploy to st') {
             steps {
-                sh 'kubectl apply -f /c/Users/DELL/cicdpractice/screpted_pipeline/StudentCoursesRestAPI/K8S/mysql-aws.yml'
-                sh 'kubectl apply -f /c/Users/DELL/cicdpractice/screpted_pipeline/StudentCoursesRestAPI/K8s/flask-aws.yml'
-                //sh 'sleep 10s'
+                sh 'kubectl apply -f ./K8s/mysql-aws.yml'
+                sh 'kubectl apply -f ./K8s/flask-aws.yml'
+                sh 'sleep 10s'
                 sh 'kubectl get svc'
             }
             
