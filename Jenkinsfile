@@ -21,6 +21,12 @@ pipeline {
                 sh 'docker image push vishnu2508/spc:latest'
             }
         }
+        stage('deploy to st'){
+            sh 'kubectl apply -f ./K8S/mysql-aws.yml'
+            sh 'kubectl apply -f ./K8S/flask-aws.yml'
+            sh 'sleep 10s'
+            sh 'kubectl get svc'
+        }
     }
 
 }
